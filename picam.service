@@ -1,0 +1,22 @@
+[Unit]
+Description=picam - security camera
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# replace with your own username
+User=pi
+Group=video
+SupplementaryGroups=pi
+ExecStart=/usr/bin/python3 /opt/picam/picam.py
+Restart=always
+RestartSec=10
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/dev/shm
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+{
+  "telegram_token": "PASTE_YOUR_BOTFATHER_TOKEN",
+  "telegram_chat_ids": [111111111],
+  "location": "living room",
+
+  "main_size": [1280, 960],
+  "lores_size": [320, 240],
+  "framerate": 10,
+
+  "rotate_180": false,
+  "rotate_90": 0,
+
+  "stream_port": 8080,
+  "stream_user": "cam",
+  "stream_pass": "PASTE_A_PASSWORD",
+  "stream_quality": 60,
+  "stream_idle_timeout": 300,
+
+  "motion_pixel_threshold": 28,
+  "motion_area_percent": 1.2,
+  "motion_confirm_frames": 2,
+  "motion_check_interval": 0.4,
+  "alert_cooldown": 60,
+  "warmup_seconds": 8
+}

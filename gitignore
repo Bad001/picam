@@ -1,0 +1,24 @@
+# real config: holds the Telegram token and the stream password
+picam.conf
+*.conf
+!picam.conf.example
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# test media
+*.jpg
+*.jpeg
+*.png
+*.h264
+*.mp4
+
+# editor / os
+.vscode/
+.idea/
+*.swp
+.DS_Store
