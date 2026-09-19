@@ -129,13 +129,24 @@ curl -s "https://api.telegram.org/bot$TOKEN/getUpdates" | python3 -m json.tool |
 
 | Command | Effect |
 |---|---|
-| `/foto` | Take a photo right now |
+| `/photo` | Take a photo right now |
 | `/stream` | Link to the LAN stream |
-| `/pausa` | Suspend motion detection |
-| `/riprendi` | Resume motion detection |
+| `/pause` | Suspend motion detection |
+| `/resume` | Resume motion detection |
 | `/status` | Uptime, temperature, free RAM, event count |
 
-**Pause state is global, not per user.** If one account sends `/pausa`, detection stops
+Register the command list with BotFather (`/setcommands`) so Telegram offers
+autocompletion:
+
+```
+photo - Take a snapshot now
+stream - LAN stream link
+pause - Suspend motion detection
+resume - Resume motion detection
+status - System status
+```
+
+**Pause state is global, not per user.** If one account sends `/pause`, detection stops
 for everyone. The other users get no notification of the change — they only see it via
 `/status`.
 
